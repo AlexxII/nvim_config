@@ -2,7 +2,7 @@ local fn = vim.fn
 
 -- Automatically install Packer
 local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
-if fn.empty(fn.glob(install_path)) > 0 then 
+if fn.empty(fn.glob(install_path)) > 0 then
 	PACKER_BOOTSTRAP = fn.system {
 		"git",
 		"clone",
@@ -44,13 +44,44 @@ return packer.startup(function(use)
 	use "wbthomason/packer.nvim"
 	use "nvim-lua/popup.nvim"
 	use "nvim-lua/plenary.nvim"
-	
+	use "windwp/nvim-autopairs"
+	-- Colorschemes
 	use "lunarvim/colorschemes"
+	use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
+	use 'tomasiser/vim-code-dark'
+	use({
+		'rose-pine/neovim',
+		as = 'rese-pine',
+		config = function()
+			vim.cmd('colorscheme rose-pine')
+
+		end
+	})
+	-- LSP
+	use "neovim/nvim-lspconfig"
+	use "williamboman/mason.nvim"
+	use "williamboman/mason-lspconfig.nvim"
+	use "glepnir/lspsaga.nvim"
+
+	-- Telescope
+	use {
+		'nvim-telescope/telescope.nvim', tag = '0.1.0',
+		requires = { { 'nvim-lua/plenary.nvim' } }
+	}
+	-- Complition
 	use "hrsh7th/nvim-cmp"
 	use "hrsh7th/cmp-path"
 	use "hrsh7th/cmp-cmdline"
+	use "hrsh7th/cmp-buffer"
+	use "hrsh7th/cmp-nvim-lsp"
+
+	--snippets
+	use "L3MON4D3/LuaSnip"
 	use "saadparwaiz1/cmp_luasnip"
-	
+
+	-- Vim master
+	use "ThePrimeagen/vim-be-good"
+
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end

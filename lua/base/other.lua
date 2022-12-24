@@ -1,4 +1,9 @@
+vim.scriptencoding = 'utf-8'
+
 local opt = vim.opt
+
+opt.encoding = 'utf-8'
+opt.fileencoding = 'utf-8'
 
 opt.splitright = true
 opt.splitbelow = true
@@ -9,11 +14,13 @@ opt.completeopt = 'menuone,noselect'
 vim.cmd [[autocmd BufEnter * set fo-=c fo-=r fo-=o]]
 
 opt.number = true
-opt.relativenumber = false
+opt.relativenumber = true
 opt.numberwidth = 2
-opt.signcolumn = "yes" 									-- show the sign colomn to reduce shift the text each time
+opt.signcolumn = "yes" -- show the sign colomn to reduce shift the text each time
 opt.cursorline = true
-
+opt.winblend = 0
+opt.wildoptions = 'pum'
+opt.pumblend = 5
 opt.termguicolors = true
 
 --[[--

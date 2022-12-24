@@ -27,3 +27,7 @@ keymap("n", "<c-up>", ":resize -2<cr>", opts)
 keymap("n", "<c-down>", ":resize +2<cr>", opts)
 keymap("n", "<c-left>", ":vertical resize -2<cr>", opts)
 keymap("n", "<c-right>", ":vertical resize +2<cr>", opts)
+
+-- Good movements
+keymap("n", "<c-d>", "<c-d>zz", opts)
+keymap("n", "<c-u>", "<c-u>zz", opts)
