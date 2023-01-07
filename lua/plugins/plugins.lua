@@ -63,6 +63,9 @@ return packer.startup(function(use)
 	use "williamboman/mason-lspconfig.nvim"
 	use "glepnir/lspsaga.nvim"
 
+	-- Status line
+	use 'nvim-lualine/lualine.nvim'
+
 	-- Telescope
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.0',

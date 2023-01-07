@@ -31,3 +31,10 @@ keymap("n", "<c-right>", ":vertical resize +2<cr>", opts)
 -- Good movements
 keymap("n", "<c-d>", "<c-d>zz", opts)
 keymap("n", "<c-u>", "<c-u>zz", opts)
+
+-- greatest remap ever
+vim.keymap.set("x", "<leader>p", [["_dP]])
+
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+
+vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
