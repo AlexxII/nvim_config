@@ -12,10 +12,10 @@ vim.g.maplocalleader = " "
 keymap("n", "<leader>e", ":Lex 30<cr>", opts)
 
 -- HardMode
-keymap("n", "h", "<nop>", opts)
-keymap("n", "j", "<nop>", opts)
-keymap("n", "l", "<nop>", opts)
-keymap("n", "k", "<nop>", opts)
+--keymap("n", "h", "<nop>", opts)
+--keymap("n", "j", "<nop>", opts)
+--keymap("n", "l", "<nop>", opts)
+--keymap("n", "k", "<nop>", opts)
 keymap("n", "<up>", "<nop>", opts)
 keymap("n", "<down>", "<nop>", opts)
 keymap("n", "<left>", "<nop>", opts)

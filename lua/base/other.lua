@@ -24,7 +24,7 @@ opt.pumblend = 5
 opt.termguicolors = true
 
 
-vim.opt.guicursor = ""
+--vim.opt.guicursor = ""
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
