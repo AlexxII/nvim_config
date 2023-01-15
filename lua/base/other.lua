@@ -54,27 +54,4 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
-vim.opt.colorcolumn = "80"
---[[--
-opt.backup = false
-opt.cmdheight = 2
-opt.conceallevel = 0
-opt.fileencoding = "utf-8"
-opt.hlsearch = true
-opt.pumheight = 10
-opt.showmode = false
-opt.splitbelow = true
-opt.splitright = true
-opt.swapfile = false
-opt.timeoutlen = 1000
-opt.undofile = true
-opt.updatetime = 300
-opt.writebackup = false
-opt.relativenumber = false
-
-opt.shortmess:append "c"
-
-vim.cmd "set whichwrap+=<,>,[,],h,l"
-vim.cmd [[set iskeyword+=-]]
-
---]]--
+vim.opt.colorcolumn = "120"

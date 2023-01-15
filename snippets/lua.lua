@@ -13,7 +13,6 @@ local fmt = require("luasnip.extras.fmt").fmt
 local snippets, autosnippets = {}, {}
 
 
-
 local myFirstSnippet = s("myFirstSnippet", {
     t("Hi This {} is my firt {}snippet"),
     i(1, "placeholder_text_1"),

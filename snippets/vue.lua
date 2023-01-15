@@ -32,4 +32,14 @@ local vsetup = s("vsetup", fmt([[
 table.insert(snippets, vsetup)
 
 
+local ref = s("ref", fmt([[
+    const {} = ref({})
+    ]], {
+    i(1, ''),
+    i(2, '')
+}))
+table.insert(snippets, ref)
+
+
+
 return snippets, autosnippets

@@ -3,11 +3,12 @@ if not status_ok then
     print("lspconfig module not loaded")
     return
 end
+local lspconfig_util = require 'lspconfig.util'
 
 local status_ok_mason, mason = pcall(require, "mason")
 local status_ok_masonconfig, mason_config = pcall(require, "mason-lspconfig")
 if not status_ok_mason then
-    print("mason packege not loaded")
+    print("mason package not loaded")
     return
 end
 
@@ -91,8 +92,39 @@ nvim_lsp.sumneko_lua.setup {
 nvim_lsp.tsserver.setup {
     on_attach = on_attach,
     --	root_dir = function() return vim.loop.cwd() end, -- load TS for all files
-    filetype = { "typescript", "typescriptreact", "typescript.tsx" },
+    filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
     cmd = { "typescript-language-server", "--stdio" },
+}
+
+nvim_lsp.volar.setup {
+    on_attach = on_attach,
+    default_config = {
+        root_dir = lspconfig_util.root_pattern("package.json", "vue.config.js", "vite.config.ts"),
+        init_options = {
+            typescript = {
+                tsdk = ''
+            },
+            languageFeatures = {
+                implementation = true, -- new in @volar/vue-language-server v0.33
+                references = true,
+                definition = true,
+                typeDefinition = true,
+                callHierarchy = true,
+                hover = true,
+                rename = true,
+                renameFileRefactoring = true,
+                signatureHelp = true,
+                codeAction = true,
+                workspaceSymbol = true,
+                completion = {
+                    defaultTagNameCase = 'both',
+                    defaultAttrNameCase = 'kebabCase',
+                    getDocumentNameCasesRequest = false,
+                    getDocumentSelectionRequest = false,
+                },
+            }
+        },
+    }
 }
 
 
