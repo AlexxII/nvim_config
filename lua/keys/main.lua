@@ -12,10 +12,10 @@ vim.g.maplocalleader = " "
 keymap("n", "<leader>e", ":Lex 30<cr>", opts)
 
 -- HardMode
---keymap("n", "h", "<nop>", opts)
---keymap("n", "j", "<nop>", opts)
---keymap("n", "l", "<nop>", opts)
---keymap("n", "k", "<nop>", opts)
+-- keymap("n", "h", "<nop>", opts)
+-- keymap("n", "j", "<nop>", opts)
+-- keymap("n", "l", "<nop>", opts)
+-- keymap("n", "k", "<nop>", opts)
 keymap("n", "<up>", "<nop>", opts)
 keymap("n", "<down>", "<nop>", opts)
 keymap("n", "<left>", "<nop>", opts)
@@ -38,3 +38,13 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+
+
+-- go defenition test
+--keymap("n", "gD", ":only<bar>vsplit<CR>gd", opts)
+--keymap("n", "gD", "<C-w><C-]>", opts)
+keymap("n", "gD", "<C-w><C-]><C-w><S-l>", opts)
+
+
+-- netrw keymap
+keymap("n", "<leader>E", ":Lexplore %:p:h<CR>", opts)

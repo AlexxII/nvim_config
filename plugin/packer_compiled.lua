@@ -109,6 +109,16 @@ _G.packer_plugins = {
     path = "/home/user/.local/share/nvim/site/pack/packer/start/colorschemes",
     url = "https://github.com/lunarvim/colorschemes"
   },
+  harpoon = {
+    loaded = true,
+    path = "/home/user/.local/share/nvim/site/pack/packer/start/harpoon",
+    url = "https://github.com/ThePrimeagen/harpoon"
+  },
+  luaPlugin = {
+    loaded = true,
+    path = "/home/user/.local/share/nvim/site/pack/packer/start/luaPlugin",
+    url = "/home/user/main/neovim/luaPlugin"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/user/.local/share/nvim/site/pack/packer/start/lualine.nvim",
@@ -175,6 +185,11 @@ _G.packer_plugins = {
     path = "/home/user/.local/share/nvim/site/pack/packer/start/rese-pine",
     url = "https://github.com/rose-pine/neovim"
   },
+  ["telescope-file-browser.nvim"] = {
+    loaded = true,
+    path = "/home/user/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
+    url = "https://github.com/nvim-telescope/telescope-file-browser.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/user/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -189,6 +204,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/user/.local/share/nvim/site/pack/packer/start/vim-code-dark",
     url = "https://github.com/tomasiser/vim-code-dark"
+  },
+  ["vim-commentary"] = {
+    loaded = true,
+    path = "/home/user/.local/share/nvim/site/pack/packer/start/vim-commentary",
+    url = "https://github.com/tpope/vim-commentary"
   }
 }
 
