@@ -47,4 +47,10 @@ keymap("n", "gD", "<C-w><C-]><C-w><S-l>", opts)
 
 
 -- netrw keymap
-keymap("n", "<leader>E", ":Lexplore %:p:h<CR>", opts)
+-- keymap("n", "<leader>e", ":Lexplore %:p:h<CR>", opts)
+
+-- NvimTree
+keymap("n", "<leader>e", ":NvimTreeToggle <CR>", opts)
+
+-- oil.nvim
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })

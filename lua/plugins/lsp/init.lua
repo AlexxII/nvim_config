@@ -92,10 +92,27 @@ nvim_lsp.arduino_language_server.setup({
   on_attach = on_attach
 })
 
-nvim_lsp.rust_analyzer.setup({
-  capabilities = Capabilities,
+nvim_lsp.clangd.setup({
   on_attach = on_attach
 })
+
+nvim_lsp.rust_analyzer.setup({
+  capabilities = Capabilities,
+  on_attach = on_attach,
+})
+
+--Enable (broadcasting) snippet capability for completion
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+require 'lspconfig'.html.setup {
+  capabilities = capabilities,
+}
+
+require 'lspconfig'.cssls.setup {
+  capabilities = capabilities,
+}
+
 
 --nvim_lsp.arduino_language_server.setup({
 --  capabilities = Capabilities,

@@ -51,8 +51,16 @@ return packer.startup(function(use)
   use "windwp/nvim-ts-autotag"
   use "kylechui/nvim-surround"
 
+  -- html/css/sass
+
   -- Commentary
   use "tpope/vim-commentary"
+
+  -- File Explore
+  use "nvim-tree/nvim-tree.lua"
+
+  -- Oil.nvim
+  use "stevearc/oil.nvim"
 
   -- Colorschemes
   use "lunarvim/colorschemes"
@@ -76,6 +84,12 @@ return packer.startup(function(use)
 
   -- Status line
   use 'nvim-lualine/lualine.nvim'
+
+  -- lines of codeblocks
+  use "lukas-reineke/indent-blankline.nvim"
+
+  -- highlight words
+  use "RRethy/vim-illuminate"
 
   -- Telescope
   use {
